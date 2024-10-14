@@ -1,6 +1,6 @@
 <template>
     <div class="NavBar">
-        <div class="nav-container-right"><div class="logoContainer"><img class="logo" src="../assets/logo/HobSocLogo.png" alt=""></div></div>
+        <div class="nav-container-right"><div class="logoContainer"><img class="logo" src="../assets/logo/HobSocLogo.png" alt="Logo" @click="toHome()"></div></div>
         <div class="nav-container-center">
             <NavLinkBtn 
             v-for="item in navItems"
@@ -14,6 +14,7 @@
 </template>
 <script>
 import NavLinkBtn from './Nav_Components/NavLinkBtn.vue';
+
 export default {
     components: {
         NavLinkBtn,
@@ -25,8 +26,15 @@ export default {
                 {name: 'feed', path: '/feed', label: 'Feed'},
                 {name: 'group', path: '/groups', label: 'Groups'},
             ],
-    };
-},};
+        };
+    
+    },
+    methods: {
+        toHome() {
+            this.$router.push('/'); // Navigate to route
+        },
+    },
+};
 
 </script>
 <style lang="scss">
@@ -50,6 +58,11 @@ export default {
             .logoContainer {
                 width:2rem;
                 height: 2rem;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: -moz-none;
+                -ms-user-select: none;
+                user-select: none;
                 .logo {
                     width:2rem;
                     height:2rem;
