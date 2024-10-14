@@ -1,8 +1,8 @@
 import { createMemoryHistory, createRouter } from 'vue-router'
 
-import HomeView from '..views/HomeView.vue'
-import FeedView from '..views/FeedView.vue'
-import CommunityView from '..views/CommunityView.vue'
+import HomeView from '../views/HomeView.vue'
+import FeedView from '../views/FeedView.vue'
+import CommunityView from '../views/CommunityView.vue'
 
 const routes = [
   { path: '/', component: HomeView },
@@ -19,3 +19,5 @@ const router = createRouter({
   history: createMemoryHistory(),
   routes,
 })
+
+export default router;
