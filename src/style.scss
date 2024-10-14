@@ -21,8 +21,11 @@ body {
 
 :root {
     --screen-background-color: #DCDDEA;
-    --navBar-background-color: #1F2124;
+    --navBar-background-color: #f0eff8;
     --menu-color: #596670;
+    --navbar-link-acitve-color: #E8CB80;
+    --navbar-link-hover-color: #979696;
+    --navbar-link-active-hover-color: #e7d7ac;
 }
 @media (prefers-color-scheme: dark) {
     :root {
