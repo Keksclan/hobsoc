@@ -24,20 +24,25 @@ body {
 }
 
 :root {
+  --menu-btn-icon-hover-color: #38383b;
   --screen-background-color: #DCDDEA;
   --navBar-background-color: #f0eff8;
   --menu-color: #596670;
+  --menu-btn-background-color: #e1e2f5;
+  --menu-btn-icon-color: #767883;
   --navbar-link-acitve-color: #E8CB80;
   --navbar-link-hover-color: #979696;
   --navbar-link-active-hover-color: #e7d7ac;
 }
 
 [data-theme="dark"] {
-
-    --screen-background-color: #131415;
-    --navBar-background-color: #1F2124;
-    --menu-color: #92979C;
-    --navbar-link-acitve-color: #eec67d;
-    --navbar-link-hover-color: #d9dadb;
-    --navbar-link-active-hover-color: #e9d7bc;
-  }
+  --menu-btn-icon-hover-color: #fafafa;
+  --screen-background-color: #131415;
+  --navBar-background-color: #1F2124;
+  --menu-color: #92979C;
+  --menu-btn-background-color: #282A2D;
+  --menu-btn-icon-color: #8E9397;
+  --navbar-link-acitve-color: #eec67d;
+  --navbar-link-hover-color: #d9dadb;
+  --navbar-link-active-hover-color: #e9d7bc;
+}

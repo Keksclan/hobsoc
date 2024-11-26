@@ -17,4 +17,4 @@ app.mount('#app');
 import {useThemeStore} from "./stores/themeStore.js";
 
 const themeStore = useThemeStore(); // Pinia muss zuerst initialisiert sein
-themeStore.setTheme("dark");
+themeStore.setTheme(themeStore.currentTheme);

@@ -12,14 +12,26 @@
           :path="item.path"
       />
     </div>
-    <div class="nav-container-left">32323</div>
+    <div class="nav-container-left">
+      <NavFuncIconBtn :on-click="switchThemes" :icon="theme_icon"/>
+      <NavIconBtn
+          v-for="items in navibtn"
+          :icon="items.icon"
+          :path="items.path"
+      />
+    </div>
   </div>
 </template>
 <script>
 import NavLinkBtn from './Nav_Components/NavLinkBtn.vue';
+import NavFuncIconBtn from './Nav_Components/NavFuncIconBtn.vue'
+import {useThemeStore} from '@/stores/themeStore';
+import NavIconBtn from "./Nav_Components/NavIconBtn.vue"
 
 export default {
   components: {
+    NavIconBtn,
+    NavFuncIconBtn,
     NavLinkBtn,
   },
   data() {
@@ -29,13 +41,30 @@ export default {
         {name: 'feed', path: '/feed', label: 'Feed'},
         {name: 'group', path: '/groups', label: 'Groups'},
       ],
+      navibtn: [
+        {icon: 'home', path: '/'},
+        {icon: 'notifications', path: '/notifications'},
+        {icon: 'account_circle', path: '/profile'},
+      ]
     };
 
+  },
+  computed: {
+    theme_icon() {
+      const themestore = useThemeStore();
+      return themestore.currentTheme === 'dark' ? 'dark_mode' : 'wb_sunny';
+    }
   },
   methods: {
     toHome() {
       this.$router.push('/'); // Navigate to route
     },
+    switchThemes() {
+      // Implement theme switching logic here
+      const themeStore = useThemeStore();
+      themeStore.setTheme(themeStore.currentTheme === 'dark' ? 'light' : 'dark');
+
+    }
   },
 };
 
@@ -74,6 +103,15 @@ export default {
       }
     }
 
+
+  }
+
+  .nav-container-left {
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
   }
 
   .nav-container-center {
@@ -85,6 +123,7 @@ export default {
     align-items: center;
 
   }
+
 
 }
 </style>

@@ -1,25 +1,30 @@
 <script>
 export default {
-  name: "NavIconBtn",
+  name: "NavFuncIconBtn.vue",
   props: {
     icon: {
       type: String,
       required: true
     },
-    path: {
-      type: String,
-      required: false
+    onClick: {
+      type: Function,
+      required: true
     }
+  },
+  methods: {
+    handleClick() {
+      this.onClick(); // Ruft die angegebene Funktion auf
+    },
   }
 }
 </script>
 
 <template>
-  <router-link class="icon-btn" :to="path">
+  <button class="icon-btn" @click="handleClick">
     <span class="material-symbols-outlined">
           {{ icon }}
     </span>
-  </router-link>
+  </button>
 </template>
 
 <style lang="scss">
@@ -27,7 +32,6 @@ export default {
   background-color: var(--menu-btn-background-color);
   border: none;
   align-items: center;
-  justify-content: center;
   border-radius: 8px;
   cursor: pointer;
   display: flex;
@@ -36,12 +40,9 @@ export default {
   margin: 0;
   font-size: 24px;
   color: var(--menu-btn-icon-color);
-  text-decoration: none;
-  
 
   &:hover {
-    color: var(--menu-btn-icon-hover-color);
-    background-color: var(--menu-btn-background-color);
+    background-color: var(--hover-color);
   }
 
   &:active {
