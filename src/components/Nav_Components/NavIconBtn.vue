@@ -37,7 +37,10 @@ export default {
   font-size: 24px;
   color: var(--menu-btn-icon-color);
   text-decoration: none;
-  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   &:hover {
     color: var(--menu-btn-icon-hover-color);

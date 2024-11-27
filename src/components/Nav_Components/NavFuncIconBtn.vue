@@ -40,6 +40,11 @@ export default {
   margin: 0;
   font-size: 24px;
   color: var(--menu-btn-icon-color);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   &:hover {
     background-color: var(--hover-color);

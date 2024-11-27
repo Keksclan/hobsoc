@@ -19,6 +19,9 @@
           :icon="items.icon"
           :path="items.path"
       />
+      <div class="nav-profile-container">
+        <NavPfpBtn/>
+      </div>
     </div>
   </div>
 </template>
@@ -27,12 +30,14 @@ import NavLinkBtn from './Nav_Components/NavLinkBtn.vue';
 import NavFuncIconBtn from './Nav_Components/NavFuncIconBtn.vue'
 import {useThemeStore} from '@/stores/themeStore';
 import NavIconBtn from "./Nav_Components/NavIconBtn.vue"
+import NavPfpBtn from "@/components/Nav_Components/NavPfpBtn.vue";
 
 export default {
   components: {
     NavIconBtn,
     NavFuncIconBtn,
     NavLinkBtn,
+    NavPfpBtn,
   },
   data() {
     return {
