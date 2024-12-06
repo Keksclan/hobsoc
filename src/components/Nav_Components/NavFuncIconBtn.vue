@@ -40,7 +40,7 @@ export default {
   margin: 0;
   font-size: 24px;
   color: var(--menu-btn-icon-color);
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

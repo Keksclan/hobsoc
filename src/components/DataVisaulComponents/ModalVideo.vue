@@ -1,14 +1,11 @@
 <script>
 export default {
-  name: "SearchView"
+  name: "ModalVideo"
 }
 </script>
 
 <template>
-  <div class="
-  main">
-    hall
-  </div>
+
 </template>
 
 <style scoped lang="scss">
